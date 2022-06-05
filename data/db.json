@@ -4,9 +4,9 @@
     },
     "models": {
         "User": {
-            "1": "{\"mail\":\"p_lobachev@inbox.ru\",\"phone_number\":\"89038061111\",\"password\":\"4253\",\"surname\":\"Лобачев\",\"name\":\"Петр\",\"Александрович\":\"\",\"datebirth\":\"23.01.2000\",\"foreigner\":\"false\",\"document\":\"1\",\"document_number\":\"2812\",\"document_series\":\"323232\",\"id\":\"1\"}",
+            "1": "{\"mail\":\"p_lobachev@inbox.ru\",\"phone_number\":\"89038061111\",\"password\":\"bfe9c3c5714f2f370608330e63f3c515344594b2c79c2656931d853b17146e71\",\"surname\":\"Лобачев\",\"name\":\"Петр\",\"otchestvo\":\"Александрович\",\"datebirth\":\"23.01.2000\",\"foreigner\":\"false\",\"document\":\"1\",\"document_number\":\"2812\",\"document_series\":\"323232\",\"id\":\"1\"}",
             "2": "{\"mail\":\"victor@mail.ru\",\"phone_number\":\"89508061111\",\"password\":\"112\",\"surname\":\"Астафьев\",\"name\":\"Виктор\",\"otchestvo\":\"Антонович\",\"datebirth\":\"1.05.1990\",\"foreigner\":\"false\",\"document\":\"1\",\"document_number\":\"2815\",\"document_series\":\"312366\",\"id\":\"2\"}",
-            "3": "{\"mail\":\"greek17@yandex.ru\",\"phone_number\":\"89238051111\",\"password\":\"232\",\"surname\":\"Бандерес\",\"name\":\"Антонио\",\"otchestvo\":\"\",\"datebirth\":\"9.03.1970\",\"foreigner\":\"true\",\"document\":\"7\",\"document_number\":\"2813\",\"document_series\":\"910221\",\"id\":\"3\"}"
+            "3": "{\"mail\":\"greek17@yandex.ru\",\"phone_number\":\"89238051111\",\"password\":\"232\",\"surname\":\"Бандерес\",\"name\":\"Антонио\",\"otchestvo\":\"Андреевич\",\"datebirth\":\"9.03.1970\",\"foreigner\":\"true\",\"document\":\"7\",\"document_number\":\"2813\",\"document_series\":\"910221\",\"id\":\"3\"}"
         }
     }
 }
