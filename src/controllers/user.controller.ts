@@ -13,6 +13,9 @@ import {SHA256} from 'crypto-js';
 import {User} from '../models';
 import {UserRepository} from '../repositories';
 
+function errFind(msg: string): never {
+  throw new Error(msg);
+}
 export class UserController {
   constructor(
     @repository(UserRepository)
@@ -37,6 +40,7 @@ export class UserController {
     @param.path.string('document_number') p_document_number: string,
     @param.path.string('document_series') p_document_series: string,
   ): Promise<Omit<User, 'id'>> {
+
     let newUser = new User();
 
     newUser.mail = p_mail;
@@ -53,6 +57,67 @@ export class UserController {
     newUser.document_series = p_document_series;
     return this.userRepository.create(newUser);
   }
+  @get('/users/{email}/')
+  @response(200, {
+    description: 'Array of User model instances',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: getModelSchemaRef(User, {includeRelations: true}),
+        },
+      },
+    },
+  })
+  async findByEmail(
+    @param.path.string('email') email: string,
+
+  ): Promise<User[] | undefined> {
+    const filter = {
+      where: {mail: email},
+
+    };
+    let user = await this.userRepository.find(filter);
+    if (user === )
+      return [];
+    // if (user === []) {
+    //   return false
+    // }
+    // else if (user[0].mail == email) {
+    //   return true;
+    // }
+
+  }
+
+
+  @get('/users/{phone_number}')
+  @response(200, {
+    description: 'Array of User model instances',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: getModelSchemaRef(User, {includeRelations: true}),
+        },
+      },
+    },
+  })
+  async findByPhone(
+    @param.path.password('phone_number') phone_number: string,
+  ): Promise<boolean> {
+    const filter = {
+      where: {phone_number: phone_number},
+
+    }
+    let user: User[] = [];
+    user = await this.userRepository.find(filter);
+    if (user[0].phone_number == phone_number) {
+      return true;
+    }
+
+    return false;
+  }
+
   @get('/users/{email}/{password}')
   @response(200, {
     description: 'Array of User model instances',
@@ -68,15 +133,22 @@ export class UserController {
   async findByNamePass(
     @param.path.string('email') email: string,
     @param.path.password('password') password: string,
-  ): Promise<any> {
-    const filter: Filter = {where: {mail: email}, fields: {password: true}}
+  ): Promise<User | undefined> {
+    const filter: Filter = {
+      where: {mail: email},
+      fields: {
+        password: true, mail: true, phone_number: true, datebirth: true
+        , surname: true, name: true, otchestvo: true, id: true
+      }
+    }
+
     let userData: User[] = await this.userRepository.find(filter);
     let hash: string = SHA256(password).toString();
     if (hash == userData[0].password) {
-      return true;
+      return userData[0]
     }
-    else {
-      return false;
+    else if (hash != userData[0].password) {
+      return undefined
     }
   }
   @get('/users/count')
