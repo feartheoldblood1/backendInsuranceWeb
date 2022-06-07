@@ -1,6 +1,6 @@
 {
   "ids": {
-    "User": 6
+    "User": 9
   },
   "models": {
     "User": {
@@ -8,7 +8,9 @@
       "2": "{\"mail\":\"victor@mail.ru\",\"phone_number\":\"89508061111\",\"password\":\"112\",\"surname\":\"Астафьев\",\"name\":\"Виктор\",\"otchestvo\":\"Антонович\",\"datebirth\":\"1.05.1990\",\"foreigner\":\"false\",\"document\":\"1\",\"document_number\":\"2815\",\"document_series\":\"312366\",\"id\":\"2\"}",
       "3": "{\"mail\":\"greek17@yandex.ru\",\"phone_number\":\"89238051111\",\"password\":\"232\",\"surname\":\"Бандерес\",\"name\":\"Антонио\",\"otchestvo\":\"Андреевич\",\"datebirth\":\"9.03.1970\",\"foreigner\":\"true\",\"document\":\"7\",\"document_number\":\"2813\",\"document_series\":\"910221\",\"id\":\"3\"}",
       "4": "{\"mail\":\"gran@ya.ru\",\"phone_number\":\"3123\",\"password\":\"6f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f443\",\"surname\":\"alsdf\",\"name\":\"pasdf\",\"otchestvo\":\"asldfj;\",\"datebirth\":\"1992-12-01T00:00:00.000Z\",\"foreigner\":\"aslk;fj\",\"document\":\"aslkfj\",\"document_number\":\"asdfjk\",\"document_series\":\"al;sdfh\",\"id\":4}",
-      "5": "{\"mail\":\"p_greate@yandex.ru\",\"phone_number\":\"+79038064347\",\"password\":\"73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049\",\"surname\":\"sadfas\",\"name\":\"asdf\",\"otchestvo\":\"asdf\",\"datebirth\":\"2022-06-09T00:00:00.000Z\",\"foreigner\":\"true\",\"document\":\"SoldierIDcard\",\"document_number\":\"4\",\"document_series\":\"4\",\"id\":5}"
+      "5": "{\"mail\":\"p_greate@yandex.ru\",\"phone_number\":\"+79038064347\",\"password\":\"73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049\",\"surname\":\"sadfas\",\"name\":\"asdf\",\"otchestvo\":\"asdf\",\"datebirth\":\"2022-06-09T00:00:00.000Z\",\"foreigner\":\"true\",\"document\":\"SoldierIDcard\",\"document_number\":\"4\",\"document_series\":\"4\",\"id\":5}",
+      "7": "{\"mail\":\"p_queue@mail.ru\",\"phone_number\":\"+79038064341\",\"password\":\"556d7dc3a115356350f1f9910b1af1ab0e312d4b3e4fc788d2da63668f36d017\",\"surname\":\"sadfas\",\"name\":\"asdf\",\"otchestvo\":\"asdf\",\"datebirth\":\"2022-06-01T00:00:00.000Z\",\"foreigner\":\"true\",\"document\":\"RussianPassport\",\"document_number\":\"3213\",\"document_series\":\"31231\",\"id\":7}",
+      "8": "{\"mail\":\"p_queue@mail.ru\",\"phone_number\":\"+79038064341\",\"password\":\"556d7dc3a115356350f1f9910b1af1ab0e312d4b3e4fc788d2da63668f36d017\",\"surname\":\"sadfas\",\"name\":\"asdf\",\"otchestvo\":\"asdf\",\"datebirth\":\"2022-06-01T00:00:00.000Z\",\"foreigner\":\"true\",\"document\":\"RussianPassport\",\"document_number\":\"3213\",\"document_series\":\"31231\",\"id\":8}"
     }
   }
 }
