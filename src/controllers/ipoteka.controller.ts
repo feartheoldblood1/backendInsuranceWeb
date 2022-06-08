@@ -10,7 +10,7 @@ export class IpotekaController {
   }
 
 
-  @post('/ipoteka/{bank}/{remains}/{insuranceObject}/{propertySHouse}/{name}/{dateBirth}/{phoneNumber}/{email}/')
+  @post('/ipoteka/{bank}/{remains}/{insuranceObject}/{propertyHouse}/{name}/{dateBirth}/{phoneNumber}/{email}/')
   @response(200, {
     description: 'Ipoteka model instance',
     content: {'application/json': {schema: getModelSchemaRef(Ipoteka)}},
