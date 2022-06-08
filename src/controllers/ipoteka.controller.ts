@@ -1,52 +1,45 @@
 // Uncomment these imports to begin using these cool features!
 
 import {getModelSchemaRef, param, post, response} from '@loopback/rest';
+import {mailer} from '../mailer-sender-module/mail-methods';
 // import {inject} from '@loopback/core';
-import * as nodemailer from 'nodemailer';
-import {Options} from 'nodemailer/lib/smtp-transport';
 import {Ipoteka} from '../models';
-const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
-  secure: false,
-  auth: {
-    user: 'jessika.bode71@ethereal.email',
-    pass: 'eP7pH9fS2Hb7WHRbVd'
-  }
-});
-
-let mailer: any = (message: Options) => {
-  transporter.sendMail(message, (err: any, info: any) => {
-    if (err) return console.log(err)
-    console.log('Email sent: ', info)
-  });
-}
-
 export class IpotekaController {
   constructor() {
 
   }
 
 
-  @post('/ipoteka/{email}/{name}/{phoneNumber}')
+  @post('/ipoteka/{bank}/{remains}/{insuranceObject}/{propertySHouse}/{name}/{dateBirth}/{phoneNumber}/{email}/')
   @response(200, {
     description: 'Ipoteka model instance',
     content: {'application/json': {schema: getModelSchemaRef(Ipoteka)}},
   })
   async sendMsgToMail(
-    @param.path.string('email') email: string,
+    @param.path.string('bank') bank: string,
+    @param.path.string('remains') remains: string,
+    @param.path.string('insuranceObject') insuranceObject: string,
+    @param.path.string('propertyHouse') propertyHouse: string,
     @param.path.string('name') name: string,
+    @param.path.string('dateBirth') dateBirth: string,
     @param.path.string('phoneNumber') phoneNumber: string,
+    @param.path.string('email') email: string,
   ): Promise<void> {
     let message = {
-      from: "Mailer Test <jessika.bode71@ethereal.email>",
-      to: email,
-      subject: 'Congratulations',
-      text: `Поздравляем, вы успешно зарегистрировались на нашем сайте
-      email: ${email}
-      name: ${name}
-      phone: ${phoneNumber}
-      `
+      from: "Проект 'Страхование' <p_lobachev@inbox.ru>",
+      to: "p_lobachev@inbox.ru",
+      subject: 'Оформление страхового полиса на ипотеку',
+      text: `Пришла заявка от  на покупку полиса на ипотеку
+      Данные клиента:
+      Имя: ${name}
+      Почта: ${email}
+      Номер телефона: ${phoneNumber}
+      Дата рождения: ${dateBirth}
+      Банк кредитор: ${bank}
+      Остаток долга (руб): ${remains}
+      Объект страхования: ${insuranceObject}
+      Имущество в ипотеке: ${propertyHouse}
+    `
     }
     mailer(message);
   }
