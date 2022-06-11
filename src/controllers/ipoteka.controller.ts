@@ -29,7 +29,7 @@ export class IpotekaController {
       from: "Проект 'Страхование' <p_lobachev@inbox.ru>",
       to: "p_lobachev@inbox.ru",
       subject: 'Оформление страхового полиса на ипотеку',
-      text: `Пришла заявка от  на покупку полиса на ипотеку
+      text: `Пришла заявка на покупку полиса на ипотеку
       Данные клиента:
       Имя: ${name}
       Почта: ${email}
