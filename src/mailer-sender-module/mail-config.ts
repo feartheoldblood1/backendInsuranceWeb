@@ -1,4 +1,4 @@
-import * as nodemailer from 'nodemailer';
+var nodemailer = require('nodemailer')
 export let transporter = nodemailer.createTransport({
   host: 'smtp.mail.ru',
   port: 465,
