@@ -15,7 +15,7 @@ export class LegelentityController {
 
 
 
-  @post('/journey/{companyName}/{addres}/{INN}/{region}/{surname}/{name}/{otchestvo}/{email}/{phone}')
+  @post('/legalentity/{companyName}/{addres}/{INN}/{region}/{surname}/{name}/{otchestvo}/{email}/{phone}')
   @response(200, {
     description: 'Ipoteka model instance',
     content: {'application/json': {schema: getModelSchemaRef(Ipoteka)}},
