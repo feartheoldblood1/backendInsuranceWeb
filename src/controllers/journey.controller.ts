@@ -3,8 +3,9 @@
 // import {inject} from '@loopback/core';
 // Uncomment these imports to begin using these cool features!
 
-import {param, post, response} from '@loopback/rest';
+import {getModelSchemaRef, param, post, response} from '@loopback/rest';
 import {mailer} from '../mailer-sender-module/mail-methods';
+import {Ipoteka} from '../models';
 // import {inject} from '@loopback/core';
 
 
@@ -17,7 +18,7 @@ export class JourneyController {
   @post('/journey/{countries}/{dateStart}/{dateEnd}/{ageRange}/{citezenship}/{email}')
   @response(200, {
     description: 'Ipoteka model instance',
-    content: {'application/json': {}},
+    content: {'application/json': {schema: getModelSchemaRef(Ipoteka)}},
   })
   async sendMsgToMail(
     @param.path.string('countries') countries: string,
