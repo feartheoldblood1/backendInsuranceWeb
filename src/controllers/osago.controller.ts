@@ -3,10 +3,6 @@
 // import {inject} from '@loopback/core';
 
 
-export class OsagoController {
-  constructor() { }
-}
-
 // Uncomment these imports to begin using these cool features!
 
 // import {inject} from '@loopback/core';
@@ -25,7 +21,7 @@ import {Ipoteka} from '../models';
 
 
 
-export class KaskoController {
+export class OsagoController {
   constructor() { }
 
 
