@@ -30,7 +30,7 @@ export class KaskoController {
 
 
 
-  @post('/kasko/{registrAddress}/{markaCar}/{markaModelClass}/{dateCar}/{engineCapacity}/{carPlace}/{name}/{phone}')
+  @post('/osago/{registrAddress}/{markaCar}/{markaModelClass}/{dateCar}/{engineCapacity}/{carPlace}/{name}/{phone}')
   @response(200, {
     description: 'Ipoteka model instance',
     content: {'application/json': {schema: getModelSchemaRef(Ipoteka)}},
